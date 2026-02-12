@@ -1,11 +1,73 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectItem from '../components/ProjectItem.astro';
+import '../styles/global.css';	
+import Navigation from '../components/Navigation.astro';	
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Home" bgImage="/images/landscape-bg.jpg">
+	<Navigation />
+	<section class="hero">
+		<p class="manifesto">
+			The fragments of life are composed of vibrations that become present when we are aware of them. 
+			We are all part of a series of vibrations that condition us to scenarios, contexts, and moments.
+		</p>
+	</section>
+
+	<section  id="projects" class="project-links">
+		<div class="item">
+			<span>Instalation</span>
+			<a href="/projects/sacha-cajon">SACHA CAJON</a>
+		</div>
+		<div class="item">
+			<span>Sound community project</span>
+			<a href="/projects/escuchadores">ESCUCHADORES</a>
+		</div>
+		
+		
+		<div class="item">
+			<span>Live session</span>
+			<a href="/projects/paisajes">7 PAISAJES SONOROS</a>
+		</div>
+	</section>
+</MainLayout>
+
+<style>
+	.hero {
+		height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.manifesto {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.8rem;
+		line-height: 1.4;
+		font-style: italic;
+	}
+	.project-links {
+		margin-top: 4rem;
+	}
+	.item {
+		margin-bottom: 2rem;
+	}
+	.item span {
+		display: block;
+		font-size: 0.8rem;
+		color: #a0ff00; /* Color verde lima de tus capturas */
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	.item a {
+		font-size: 1.4rem;
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+		transition: opacity 0.3s;
+	}
+	.item a:hover {
+		opacity: 0.7;
+	}
+</style>

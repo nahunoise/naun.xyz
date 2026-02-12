@@ -1,0 +1,97 @@
+---
+// src/components/Navigation.astro
+---
+<nav class="nav-global">
+  <div class="nav-container">
+    
+    <div class="nav-logo">
+      <a href="/">
+        <img src="/logo.svg" alt="Nahun Saldaña Logo" />
+      </a>
+    </div>
+
+    <div class="nav-wrapper">
+      <a href="/bio" class="nav-link">Bio</a>
+      <a href="/#projects" class="nav-link">Projects</a>
+      <a href="/contact" class="nav-link">Contact</a>
+    </div>
+    
+  </div>
+</nav>
+
+<style>
+  .nav-global {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3.5rem 0; /* Un poco más de aire arriba */
+    z-index: 1000;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: center; /* Centra el nav-wrapper */
+    align-items: center;
+    padding: 0 5%;
+    position: relative; /* Base para el logo absoluto */
+    width: 100%;
+  }
+
+  .nav-logo {
+    position: absolute;
+    left: 5%; /* Alineado con el padding del contenedor */
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-logo img {
+    height: 22px; /* Tamaño sutil, muy de portafolio de artista */
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-logo:hover {
+    opacity: 0.6;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    gap: 6rem; /* Aquí controlas la separación entre Bio, Projects y Contact */
+  }
+
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que las palabras se corten */
+  }
+
+  .nav-link:hover {
+    opacity: 0.4;
+  }
+
+  /* Ajustes para móviles: El logo se pone arriba y los links abajo */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    
+    .nav-logo {
+      position: relative; /* Vuelve al flujo normal en móvil */
+      left: 0;
+      margin-bottom: 1rem;
+    }
+
+    .nav-wrapper {
+      gap: 2rem;
+    }
+  }
+</style>

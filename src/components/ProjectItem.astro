@@ -1,0 +1,47 @@
+---
+// ProjectItem.astro
+interface Props {
+  category: string;
+  title: string;
+  href: string;
+}
+
+const { category, title, href } = Astro.props;
+---
+
+<div class="project-item">
+  <span class="category">{category}</span>
+  <a href={href} class="title">{title}</a>
+</div>
+
+<style>
+  .project-item {
+    margin-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  .category {
+    display: block;
+    font-size: 0.75rem;
+    color: #b5ff00; /* El verde lima característico */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+  }
+
+  .title {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+  }
+
+  .title:hover {
+    transform: translateX(5px);
+  }
+</style>

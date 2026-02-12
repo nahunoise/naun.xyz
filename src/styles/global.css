@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Imagen de proyecto en la página de detalle */
+.project-header-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: grayscale(20%);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000; /* Fondo negro base para evitar destellos blancos */
+}
+
+/* Tipografía Serif para los textos poéticos (Imagen 3) */
+.serif-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+}

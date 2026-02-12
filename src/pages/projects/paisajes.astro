@@ -1,0 +1,151 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="7 Paisajes sonoros que no deberían desaparecer">
+  <div class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">
+        7 Paisajes sonoros que <br />
+        no deberían desaparecer
+      </h1>
+    </header>
+
+    <div class="image-wrapper">
+      <img 
+        src="/images/paisajes.jpg" 
+        alt="Visualización del proyecto Paisajes Sonoros" 
+        class="featured-image"
+      />
+    </div>
+
+    <article class="project-content">
+      <p>
+        La selva es un ecosistema vibrante donde los sonidos de aves, insectos, 
+        ríos y animales crean un paisaje sonoro único. Sin embargo, este 
+        concierto natural está desapareciendo. La deforestación, el cambio 
+        climático y la expansión humana están silenciando la selva poco a poco.
+      </p>
+
+      <p>
+        Cuando los árboles caen y la biodiversidad se reduce, el canto de los 
+        pájaros disminuye, los insectos desaparecen y el eco de los monos 
+        aulladores se apaga. En su lugar, emergen los sonidos del viento seco 
+        sobre tierras degradadas, el zumbido de motosierras y el silencio de 
+        un ecosistema moribundo.
+      </p>
+
+      <p class="highlight">
+        Proteger los paisajes sonoros de la selva es conservar su vida misma. 
+        Cada sonido que desaparece es una señal de alerta de un ecosistema en crisis.
+      </p>
+
+      <p>
+        Estos paisajes sonoros no solo son registros de una selva en extinción, 
+        sino una pieza viva para ser interpretada en vivo. A través de sonidos 
+        grabados y recreados con instrumentos, sintetizadores y voces, se busca 
+        revivir la esencia acústica de la selva.
+      </p>
+    </article>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VMo6th0AZl4?si=9iN9jGCeqkyb045q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <footer class="project-footer">
+       <div class="footer-nav">
+          <a href="/bio">Bio</a>
+          <a href="/projects">Projects</a>
+          <a href="/profesional">Profesional</a>
+       </div>
+    </footer>
+  </div>
+</MainLayout>
+
+<style>
+  .project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 8rem; /* Espacio para el nav absoluto */
+  }
+
+  .project-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
+  }
+
+  .project-content {
+    max-width: 700px; /* El texto es más estrecho para facilitar la lectura */
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
+
+  .project-content p {
+    font-family: 'Inter', sans-serif; /* O una Serif si prefieres el look de la img 3 */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .project-content p.highlight {
+    color: #ffffff;
+    font-weight: 400;
+  }
+
+  /* Navegación inferior */
+  .project-footer {
+    border-top: 1px solid #333;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .footer-nav a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .project-container {
+      padding-top: 6rem;
+    }
+    .footer-nav {
+      gap: 2rem;
+    }
+  }
+</style>

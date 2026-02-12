@@ -1,0 +1,144 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Escuchadores">
+  <div class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">
+        Escuchadores <br />
+</h1> <h3 class="project-subtitle"> Así como hay miradores tambien debe existir escuchadores</h3>
+      </h1>
+    </header>
+
+    <div class="image-wrapper">
+      <img 
+        src="/images/escuchadores.jpg" 
+        alt="Visualización del proyecto Escuchadores" 
+        class="featured-image"
+      />
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RG5zCHvFN9s?si=5VZ8r2kc3V2oEOQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <article class="project-content">
+      <p>
+        LA PROTECCIÓN DE PAISAJES SONOROS DESDE LA ESCUCHA ACTIVA
+      </p>
+
+      <p>
+        Los cambios en el paisaje sonoro pueden indicar alteraciones en el entorno, como la pérdida de biodiversidad o la presencia de amenazas ambientales. Con la ayuda de la tecnología, podemos registrar y analizar estas frecuencias para monitorear la salud de los ecosistemas.
+
+Nuestro último artefacto de escucha construido está compuesto por tres 'orejas' de diferentes tamaños que permiten escuchar distintos tipos de rangos sonoros de la naturaleza.
+      </p>
+
+      <p class="highlight">
+       SI HAY VIDA, HAY SONIDOS.
+LOS SONIDOS NOS ATRAVIESAN Y TRANSFORMAN
+      </p>
+
+      <p>
+       PARA CUIDARNOS PRIMERO TENEMOS QUE ESCUCHARNOS, NO HAY EMPATÍA POSIBLE SIN UNA ESCUCHA HONESTA Y LO MISMO PASA CON TODOS LOS SERES QUE HABITAMOS EN ESTE PLANETA.
+      </p>
+    <a href="www.escuchadores.com">web</a>
+    </article>
+
+    <footer class="project-footer">
+       <div class="footer-nav">
+          <a href="/bio">Bio</a>
+          <a href="/projects">Projects</a>
+          <a href="/profesional">Profesional</a>
+       </div>
+    </footer>
+  </div>
+</MainLayout>
+
+<style>
+  .project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 8rem; /* Espacio para el nav absoluto */
+  }
+
+  .project-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
+  }
+
+  .project-content {
+    max-width: 700px; /* El texto es más estrecho para facilitar la lectura */
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
+
+  .project-content p {
+    font-family: 'Inter', sans-serif; /* O una Serif si prefieres el look de la img 3 */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .project-content p.highlight {
+    color: #ffffff;
+    font-weight: 400;
+  }
+
+  /* Navegación inferior */
+  .project-footer {
+    border-top: 1px solid #333;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .footer-nav a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .project-container {
+      padding-top: 6rem;
+    }
+    .footer-nav {
+      gap: 2rem;
+    }
+  }
+</style>

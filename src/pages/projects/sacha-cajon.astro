@@ -1,0 +1,160 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Sacha Cajon">
+  <div class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">
+        Sacha Cajon <br />
+            
+      </h1>
+      <h3 class="project-subtitle"> Un instrumento para sesiones que conectan con la naturaleza y la resistencia ¿Por qué el cajón peruano no llegó a la selva? </h3>
+    </header>
+
+    <div class="image-wrapper">
+      <img 
+        src="/images/sachacajon.jpg" 
+        alt="Visualización del proyecto Sacha Cajon" 
+        class="featured-image"
+      />
+    </div>
+
+    <article class="project-content">
+      <p>
+        Sacha cajón es un instrumento que documenta y 
+        resalta la resistencia afroperuana e indigena selvática. 
+        Un instrumento que responde a los patrones sonoros que se usaron 
+        la comunidad afrodescendiente para resistir, así como patrones rítmicos que usan las comunidades indígenas en la selva. Es un instrumento especulativo que transmite de manera lúdica y provocativa lo que sucedió en la selva peruana en la época del caucho (1870-1920) . Cada patrón sonoro genera una escena significativa de lo que fue esta historia de resistencia.
+      </p>
+        <div class="image-wrapper">
+      <img 
+        src="/images/explotation.jpg" 
+        alt="Visualización del proyecto Sacha Cajon" 
+        class="featured-image"
+      />
+    </div>
+
+      <p>
+        El Sacha Cajón documenta y resalta la resistencia afroperuana e 
+        indígena amazónica mediante la exploración de patrones rítmicos que dialogan 
+        entre ambas tradiciones. Retoma estructuras sonoras utilizadas por comunidades 
+        afrodescendientes como formas de resistencia, así como patrones rítmicos propios de pueblos 
+        indígenas de la selva. Esta convergencia no busca una fusión estética, sino evidenciar resonancias 
+        históricas en torno a la supervivencia, la organización y la afirmación cultural frente a la violencia extractiva.
+
+      </p>
+
+      <p class="highlight">
+        Proteger nuestra memoria es tambien proteger la naturaleza misma. 
+        Cada patrón sonoro que se pierde es una señal de alerta de un ecosistema en crisis. </p> 
+      
+
+      <p>
+        Sacha Cajón transforma el acto musical en un gesto de memoria crítica. 
+        Cada patrón sonoro activa una dimensión histórica y simbólica del periodo del caucho. 
+        La presentación propone un espacio de escucha activa que invita a reflexionar 
+        sobre las consecuencias del extractivismo en la Amazonía y sobre las formas de resistencia que continúan resonando en el presente.
+
+      </p>
+    </article>
+
+    <footer class="project-footer">
+       <div class="footer-nav">
+          <a href="/bio">Bio</a>
+          <a href="/projects">Projects</a>
+          <a href="/profesional">Profesional</a>
+       </div>
+    </footer>
+  </div>
+</MainLayout>
+
+<style>
+  .project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 8rem; /* Espacio para el nav absoluto */
+  }
+
+  .project-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño fluido */
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
+  }
+
+  .project-content {
+    max-width: 700px; /* El texto es más estrecho para facilitar la lectura */
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
+
+  .project-content p {
+    font-family: 'Inter', sans-serif; /* O una Serif si prefieres el look de la img 3 */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .project-content p.highlight {
+    color: #ffffff;
+    font-weight: 400;
+  }
+
+  /* Navegación inferior */
+  .project-footer {
+    border-top: 1px solid #333;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .footer-nav a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .project-container {
+      padding-top: 6rem;
+    }
+    .footer-nav {
+      gap: 2rem;
+    }
+  }
+</style>
