@@ -76,22 +76,26 @@
   .nav-link:hover {
     opacity: 0.4;
   }
-
-  /* Ajustes para móviles: El logo se pone arriba y los links abajo */
+/* Ajustes para móviles */
   @media (max-width: 768px) {
+    .nav-global {
+      position: relative; /* Cambiamos de absolute a relative */
+      padding: 2rem 0;    /* Reducimos el padding excesivo en móvil */
+    }
+
     .nav-container {
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 1.5rem; /* Espacio entre logo y links */
     }
     
     .nav-logo {
-      position: relative; /* Vuelve al flujo normal en móvil */
-      left: 0;
-      margin-bottom: 1rem;
+      position: relative; 
+      left: auto; /* Centramos el logo */
+      margin-bottom: 0.5rem;
     }
 
     .nav-wrapper {
-      gap: 2rem;
+      gap: 1.5rem; /* Links un poco más juntos para que no se desborden */
     }
   }
 </style>
