@@ -3,45 +3,70 @@ import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 
 interface Props {
-	title: string;
-	bgImage?: string;
+    title: string;
+    bgImage?: string;
+    description?: string;
 }
 
-const { title, bgImage } = Astro.props;
+const { 
+    title, 
+    bgImage, 
+    description = "Exploración de paisajes sonoros, cartografías especulativas y proyectos de arte sonoro por Nahun Saldaña." 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://naun.xyz');
+const socialImageURL = new URL('/share-image.jpg', canonicalURL);
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{title} | Nahun Saldaña</title>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
-	</head>
-	<body style={bgImage ? `background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage});` : ''}>
-		<Navigation />
-		<main class="container">
-			<slot />
-		</main>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <title>{title} | Nahun Saldaña</title>
+        <meta name="title" content={`${title} | Nahun Saldaña`} />
+        <meta name="description" content={description} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={`${title} | Nahun Saldaña`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={socialImageURL} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={`${title} | Nahun Saldaña`} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={socialImageURL} />
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body style={bgImage ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})` } : {}}>
+        <Navigation />
+        <main class="container">
+            <slot />
+        </main>
+    </body>
 </html>
 
 <style>
-	body {
-		background-color: #1a1a1a;
-		color: #e0e0e0;
-		margin: 0;
-		font-family: 'Inter', sans-serif;
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-		min-height: 100vh;
-	}
-	.container {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 4rem 2rem;
-	}
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        min-height: 100vh;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
 </style>
