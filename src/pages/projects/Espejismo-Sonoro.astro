@@ -1,0 +1,308 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Speculative Sound Mapping (2021 - 2036) - Espejismo Sonoro">
+  <div class="project-container">
+    <header class="project-header">
+      <h1 class="project-title">
+        Speculative Sound Mapping <br />
+        2021 - 2036
+      </h1>
+      <div class="project-subtitle">
+        <p>Espejismo Sonoro | Arin, Calca, Cusco, Perú</p>
+        <p>2956 msnm — S13° 18.140' W72° 00.572’</p>
+      </div>
+    </header>
+
+    <div class="image-wrapper">
+      <img 
+        src="/images/arin_speculative.gif" 
+        alt="Arin, Calca - Paisaje sonoro y territorio" 
+        class="featured-image"
+      />
+    </div>
+
+    <article class="project-content">
+      <p>
+        Los espejismos sonoros son el conjunto de evocaciones visuales, materiales y/o sentimentales estimuladas por una extracción sonora en un tiempo y espacio determinado. Como cualquier proceso individual de percepción e ilusión, puede estar condicionado a experiencias pasadas o proyecciones de futuro, cobrando nuevos significados y sentimientos para el ser que los contempla. Sin embargo, su asociación siempre será territorial, comunitaria o identitaria en el mejor de los casos.
+      </p>
+
+      <p class="highlight">
+        El espejismo no es más que una excusa para la imaginación y, desde allí, compartir visiones colectivas que permitan configurar los futuros que deseamos como grupos en un territorio determinado.
+      </p>
+
+      <p>
+        Es aquí donde el sonido cobra gran relevancia, ya que es la forma más auténtica de acercarse a una realidad presente y viva, bajo la premisa de que todo lo que tiene vida, vibra.
+      </p>
+
+      <div class="video-responsive">
+        <iframe 
+          src="https://www.youtube.com/embed/BXsifawfjDo?si=3o3OfXotWAlqGdKs" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <hr class="section-divider" />
+
+      <h3>Una necesidad humana</h3>
+      <p>
+        Como humanos tenemos la necesidad de recrear otros mundos; lo hacemos desde los mitos y otras utopías. Esto se hace cada vez más necesario a medida que nuestros horizontes se tornan no solo de crecimiento sino también de un inminente colapso climático. Necesitamos nuevos mundos que nos alejen del aquí y el ahora. La cartografía sonora cumple ese papel, de imaginación y especulación.
+      </p>
+
+      <h3>La implicación del paisaje sonoro</h3>
+      <p>
+        Desde la revolución industrial, muchos lugares del mundo han transformado drásticamente su entorno acústico. Sin embargo, existen lugares que aún conservan un paisaje sonoro sin mucha contaminación, convirtiéndose así en espacios para estudiar y reflexionar sobre la contaminación acústica. Bajo esta mirada, surgen las siguientes interrogantes:
+      </p>
+      
+      <ul class="questions-list">
+        <li>¿Es Arin un entorno sonoramente sostenible?</li>
+        <li>¿Qué es un entorno sonoramente sostenible para el individuo contemporáneo?</li>
+        <li>¿Cuál es la relación que tiene el ser humano con su entorno sonoro?</li>
+      </ul>
+
+      <h3>Arin, el territorio</h3>
+      <p>
+        Arin, uno de los tantos centros poblados dentro del Valle Sagrado, se ubica entre Calca y Urubamba. Consta de tres paraderos en medio de la carretera. Cuentan con varios comercios, hoteles, una iglesia, un salón comunal y diversas chicherías a lo largo del territorio. El punto más característico es una catarata administrada por los mismos pobladores, razón por la cual a veces está encendida y otras veces apagada. El agua recorre todo el pueblo. Cuenta con puentes y conviven muchos animales entre perros, ovejas, cerdos y gatos.
+      </p>
+
+      <hr class="section-divider" />
+
+      <h3>Método Especulativo</h3>
+      <p>
+        El registro sucederá 5 veces cada 3 años, con el fin de registrar 15 años de transformación de la identidad sonora del territorio y la comunidad, en los mismos puntos georeferenciados y en la misma época del año.
+      </p>
+
+      <div class="timeline-grid">
+        <div class="timeline-item">OCT - NOV 2021</div>
+        <div class="timeline-item">OCT - NOV 2024</div>
+        <div class="timeline-item">OCT - NOV 2027</div>
+        <div class="timeline-item">OCT - NOV 2030</div>
+        <div class="timeline-item">OCT - NOV 2033</div>
+        <div class="timeline-item">OCT - NOV 2036</div>
+      </div>
+
+      <p class="method-detail">
+        Cada audio estará compuesto por 3 minutos siendo un fragmento de la totalidad del audio. <br>
+        Habrá 15 sonidos de cada parte conformando una sesión de 15 minutos de puro sonido.
+      </p>
+
+      <div class="thanks-section">
+        <p><strong>Agradecimientos:</strong> Unuwasi hotel, Jeronimo Centurion, Carlos Garavito, Ursula Bravo, Movan, Cotita Macedo, Nahun Saldaña Davila, Alim Nao Saldaña Macedo, Evelyn Saldaña Macedo.</p>
+        <p><em>Proyecto realizado en Residencia Kai, octubre y noviembre 2021.</em></p>
+      </div>
+    </article>
+
+    <footer class="project-footer">
+       <div class="footer-nav">
+          <a href="/bio">Bio</a>
+          <a href="/projects">Projects</a>
+          <a href="/profesional">Profesional</a>
+       </div>
+    </footer>
+  </div>
+</Layout>
+
+<style>
+  /* --- ESTILOS DEL VIDEO ACTUALIZADOS (OPCIÓN 1) --- */
+ .video-responsive {
+    position: relative;
+    padding-bottom: 80.25%; /* Relación 16:9 */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin-bottom: 6rem; /* Aumentamos margen */
+    margin-top: 4rem;
+
+    /* Pantalla completa */
+    width: 100vw; 
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw; 
+    margin-right: -50vw;
+  }
+
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    image-rendering: -webkit-optimize-contrast; 
+  }
+
+  /* --- RESTO DE ESTILOS BASE --- */
+  .project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 8rem;
+  }
+
+  .project-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  .project-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(20%) contrast(1.1);
+  }
+
+  .project-content {
+    max-width: 700px; /* Texto estrecho para lectura */
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
+
+  .project-content h3 {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .project-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .project-content p.highlight {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    border-left: 2px solid #555;
+    padding-left: 1.5rem;
+  }
+
+  .section-divider {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 4rem 0;
+  }
+
+  .questions-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .questions-list li {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .timeline-item {
+    background: #111;
+    padding: 1rem;
+    border: 1px solid #222;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  .method-detail {
+    font-size: 0.9rem !important;
+    color: #888 !important;
+  }
+
+  .thanks-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #0a0a0a;
+    border-radius: 4px;
+  }
+
+  .thanks-section p {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .project-footer {
+    border-top: 1px solid #333;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .footer-nav a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .project-container { padding-top: 6rem; }
+    .footer-nav { gap: 2rem; }
+    .timeline-grid { grid-template-columns: 1fr; }
+    
+    /* En móvil cancelamos el efecto full-width para que no de problemas */
+    .video-responsive {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
+</style>
