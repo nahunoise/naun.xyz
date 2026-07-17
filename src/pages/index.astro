@@ -3,10 +3,9 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ProjectItem from '../components/ProjectItem.astro';
 import '../styles/global.css';	
 import Navigation from '../components/Navigation.astro';	
-
 ---
 
-<MainLayout title="Home" bgImage="/images/landscape-bg.jpg">
+<MainLayout title="Home" bgImage="/images/landscape-bg.jpg" animatedBg={true}>
 
 	<section class="hero">
 		<p class="manifesto">
@@ -15,25 +14,26 @@ import Navigation from '../components/Navigation.astro';
 		</p>
 	</section>
 
-	<section  id="projects" class="project-links">
+	<section id="projects" class="project-links">
 		<div class="item">
-			<span>Instalation</span>
-			<a href="/projects/sacha-cajon">SACHA CAJON</a>
+			<span>SPECULATIVE SOUND ARTEFACT</span>
+			<a href="/projects/lisetinglikeabutterfly">Liseting Like a Butterfly</a>
+		</div>
+		<div class="item">
+			<span>Installation</span>
+			<a href="/projects/sacha-cajon">Sacha Cajón</a>
 		</div>
 		<div class="item">
 			<span>Sound community project</span>
-			<a href="/projects/escuchadores">ESCUCHADORES</a>
+			<a href="/projects/escuchadores">Escuchadores</a>
 		</div>
-		
-		
 		<div class="item">
 			<span>Live session</span>
-			<a href="/projects/paisajes">7 PAISAJES SONOROS</a>
+			<a href="/projects/paisajes">7 Paisajes Sonoros que no deben desaparecer</a>
 		</div>
-
 		<div class="item">
 			<span>Cartography Sound Speculative</span>
-			<a href="/projects/Espejismo-Sonoro">ESPEJISMO SONORO</a>
+			<a href="/projects/Espejismo-Sonoro">Espejismos sonoros </a>
 		</div>
 	</section>
 </MainLayout>
@@ -61,7 +61,7 @@ import Navigation from '../components/Navigation.astro';
 	.item span {
 		display: block;
 		font-size: 0.8rem;
-		color: #a0ff00; /* Color verde lima de tus capturas */
+		color: #a0ff00;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 	}

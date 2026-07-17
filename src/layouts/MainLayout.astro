@@ -6,16 +6,23 @@ interface Props {
     title: string;
     bgImage?: string;
     description?: string;
+    animatedBg?: boolean;
 }
 
 const { 
     title, 
     bgImage, 
-    description = "Exploración de paisajes sonoros, cartografías especulativas y proyectos de arte sonoro por Nahun Saldaña." 
+    description = "Exploración de paisajes sonoros, cartografías especulativas y proyectos de arte sonoro por Nahun Saldaña.",
+    animatedBg = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://naun.xyz');
 const socialImageURL = new URL('/share-image.jpg', canonicalURL);
+
+// Solo aplicamos la imagen de fondo si NO hay animación activa
+const bodyStyle = (bgImage && !animatedBg)
+    ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})` }
+    : {};
 ---
 
 <!doctype html>
@@ -44,18 +51,29 @@ const socialImageURL = new URL('/share-image.jpg', canonicalURL);
         <meta property="twitter:image" content={socialImageURL} />
 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+        {animatedBg && (
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js" is:inline></script>
+        )}
     </head>
-    <body style={bgImage ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})` } : {}}>
+    <body style={bodyStyle} class={animatedBg ? 'animated-bg' : ''}>
+        
+        {animatedBg && <div id="bg-canvas-holder"></div>}
+
         <Navigation />
         <main class="container">
             <slot />
         </main>
+
+        {animatedBg && (
+            <script src="/scripts/slime-bg.js" is:inline></script>
+        )}
     </body>
 </html>
 
 <style>
     body {
-        background-color: #1a1a1a;
+        background-color: #000000;
         color: #e0e0e0;
         margin: 0;
         font-family: 'Inter', sans-serif;
@@ -64,9 +82,28 @@ const socialImageURL = new URL('/share-image.jpg', canonicalURL);
         background-position: center;
         min-height: 100vh;
     }
+    body.animated-bg {
+        background-color: #00000000;
+        background-image: none !important;
+    }
     .container {
         max-width: 800px;
         margin: 0 auto;
         padding: 4rem 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    #bg-canvas-holder {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    #bg-canvas-holder canvas {
+        display: block;
     }
 </style>
